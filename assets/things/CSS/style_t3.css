@@ -1,0 +1,163 @@
+body{
+    margin: 0;
+    padding: 0;
+
+    background-image: url("../Img/quizBackgroung.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#sideNav{
+    background: rgb(2, 40, 73);
+    width: 250px;
+    height: 100vh;
+    
+    position: fixed;
+    right: -250px;
+    top: 0;
+    z-index: 2;
+    transition: 0.5s;
+
+    font-size: 20px;
+    font-style: italic;
+}
+
+nav ul{
+    margin-top: 100px;
+    padding: 0;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 50px 20px 50px 30px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+#manu_buttons{
+    background: rgb(2, 40, 73);
+    position: fixed;
+    text-align: center;
+
+    width: 50px;
+    height: 50px;
+
+    right: 20px;
+    top: 20px;
+
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#manu_buttons img{
+    width: 20px;
+    margin-top: 15px;
+}
+
+#content #p1{
+    color: orange;
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    margin: 80px 0 0 650px;
+
+    padding: 10px;
+    margin: 0 0 50px 675px;
+    box-shadow: 0 10px 10px 0 orange;
+    border-radius: 30px;
+}
+
+#content #p2{
+    color: white;
+    font-size: 40px;
+    font-style: italic;
+    text-align: center;
+
+    width: 450px;
+    height: 50px;
+
+    padding: 10px;
+    margin: 25px 0 20px 550px;
+    box-shadow: 0 0 55px 0 white;
+    border-radius: 30px;
+}
+
+.question{
+    background-color: antiquewhite;
+    color: black;
+
+    font-size: 30px;
+    font-style: italic;
+    text-align: center;
+
+    width: 750px;
+    height: 50px;
+
+    margin: 35px 0 10px 375px;
+    padding: 20px;
+    border-radius: 30px;
+    border: 5px solid black;
+}
+
+.left,
+.right{
+    margin-top: 25px;
+    margin-left: 150px;
+    display: inline-block;
+}
+
+.ans_1,
+.ans_2,
+.ans_3,
+.ans_4{
+    background-color: beige;
+
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+
+    width: 500px;
+    height: 75px;
+
+    border-color: white;
+    box-shadow: 0 0 10px 0 white;
+    border-radius: 30px;
+    margin: 0 0 20px 80px;
+}
+
+.next{
+    text-align: center;
+}
+
+.next button{
+    background-color: blue;
+    color: white;
+    
+    font-size: 35px;
+    font-style: italic;
+    text-align: center;
+
+    padding: 15px 50px;
+    border-radius: 30px;
+    box-shadow: 0 0 50px 0 blue;
+    border: 1px solid blue;
+    margin: 10px 0 50px 0;
+}

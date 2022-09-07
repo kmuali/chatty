@@ -1,0 +1,7 @@
+.chat-body {
+    height: calc(80vh - 8em);
+}
+
+#emojiButtonsDiv button{
+    font-size: larger;
+}

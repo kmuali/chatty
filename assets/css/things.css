@@ -1,0 +1,8 @@
+iframe {
+    width: 100vw;
+    height: calc(100vh - 3.5rem);
+}
+
+html,body{
+    overflow-y: hidden;
+}

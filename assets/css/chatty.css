@@ -1,0 +1,25 @@
+body {
+    background-image: url(../img/bg-pattern-block.jpg);
+    font-family:  Arial, Helvetica, sans-serif !important;
+}
+
+.navbar .btn {
+    border-radius: 1rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.scale-150 {
+    transform: scale(150%);
+}
+
+.navbar-chatty {
+    transition-duration: 0.3s;
+}
+
+.navbar-chatty:hover {
+    color: white !important;
+    transition-duration: 0.3s;
+}
