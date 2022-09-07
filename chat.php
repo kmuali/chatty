@@ -43,10 +43,6 @@
                             <span class="d-xl-inline d-none">Emoji</span>
                             <i class="fa-solid fa-smile"></i>
                         </button>
-                        <!-- <button class="input-group-prepend btn  btn-outline-info text-dark m-0 border" type="button">
-                            <span class="d-xl-inline d-none">Image</span>
-                            <i class="fa-solid fa-image"></i>
-                        </button> -->
                         <button class="input-group-prepend btn btn-primary m-0" type="submit">
                             <span class="d-lg-inline d-none">Send</span>
                             <i class="fa-solid fa-paper-plane"></i>
