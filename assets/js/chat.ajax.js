@@ -60,6 +60,6 @@ function refreshMessages() {
 refreshMessages();
 setInterval(function () {
     refreshMessages();
-}, 5000);
+}, 60_000);
 
 scrollChatBody();

@@ -19,7 +19,7 @@
         <div class="card bg-light">
             <div class="card-header lead text-center">
                 <i class="fa-regular fa-comments"></i>
-                Chatting Room <span class="opacity-50">(Refreshed automatically every 5 seconds)</span>
+                Chatting Room <span class="opacity-50">(Refreshed automatically a minute)</span>
             </div>
             <div class="chat-body card-body lead overflow-auto" id="cardBodyDiv">
                 <!-- Auto generated from AJAX requests -->
