@@ -1,34 +1,13 @@
 @font-face {
-    font-family: "Kufam";
-    src: url("../webfonts/Kafum/Kufam-Regular.ttf") format("truetype");
+    font-family: 'Prompt';
+    src: url("../webfonts/Prompt-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
-}
-
-@font-face {
-    font-family: "Kufam";
-    src: url("../webfonts/Kafum/Kufam-Italic.ttf") format("truetype");
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Kufam";
-    src: url("../webfonts/Kafum/Kufam-Bold.ttf") format("truetype");
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Kufam";
-    src: url("../webfonts/Kafum/Kufam-BoldItalic.ttf") format("truetype");
-    font-weight: bold;
-    font-style: italic;
 }
 
 body {
     background-image: url(../img/bg-pattern-block.jpg);
-    font-family: 'Kufam', sans-serif !important;
+    font-family: 'Prompt', sans-serif !important;
 }
 
 .navbar .btn {
