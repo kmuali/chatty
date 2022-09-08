@@ -18,6 +18,12 @@ function toggleEmojis() {
 }
 
 
+function scrollChatBody() {
+    setTimeout(() => {
+        cardBodyDiv.scrollTo(0, cardBodyDiv.scrollHeight);
+    }, 300);
+}
+
 function sendForm() {
     let http = new XMLHttpRequest();
     http.open("POST", "assets/php/db/chat.ajax.php", true);
@@ -31,6 +37,10 @@ function sendForm() {
     refreshMessages();
     isOn = true;
     toggleEmojis();
+    if (msgInput.value) {
+        scrollChatBody();
+        msgInput.value = "";
+    }
     return false;
 }
 
@@ -52,6 +62,4 @@ setInterval(function () {
     refreshMessages();
 }, 5000);
 
-setTimeout(() => {
-    cardBodyDiv.scrollTo(0, cardBodyDiv.scrollHeight);
-}, 300);
+scrollChatBody();
