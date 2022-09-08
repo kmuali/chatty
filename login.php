@@ -36,18 +36,22 @@
                     $__password = $_POST["pass"];
                     $__remMe = $_POST["remMe"];
                     $userId = $pdo->getUserIdByUsername($__username);
-                    if ($userId) {
-                        require_once "assets/php/db/ChattyPDO.php";
-                        $pdo = new ChattyPDO();
-                        if (password_verify($__password, $pdo->getUserRowById($userId)["password"])) {
-                            require_once "assets/php/db/user.php";
-                            logUserIn($userId,  $__remMe ? 7 : 0.5);
-                            header("Location: chat.php");
+                    if (!$userId)
+                        $userId = $pdo->getUserIdByEmail($__username);
+                    if ($__username && $__password) {
+                        if ($userId) {
+                            require_once "assets/php/db/ChattyPDO.php";
+                            $pdo = new ChattyPDO();
+                            if (password_verify($__password, $pdo->getUserRowById($userId)["password"])) {
+                                require_once "assets/php/db/user.php";
+                                logUserIn($userId,  $__remMe ? 7 : 0.5);
+                                header("Location: chat.php");
+                            } else {
+                                echo "Username and password do not match";
+                            }
                         } else {
-                            echo "Username and password do not match";
+                            echo "Username or email address is not found";
                         }
-                    } else {
-                        echo "Username and password do not match";
                     }
                     ?>
                 </div>
@@ -62,7 +66,7 @@
 
     <?php require_once "assets/php/footer.php" ?>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    
+
 </body>
 
 </html>

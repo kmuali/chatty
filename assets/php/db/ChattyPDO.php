@@ -68,6 +68,10 @@ class ChattyPDO extends PDO
     {
         return $this->run("SELECT `id` FROM $this->users_table_name WHERE LOWER(`username`) = LOWER(?)", [$username])->fetchAll()[0][0];
     }
+    public function getUserIdByEmail($email)
+    {
+        return $this->run("SELECT `id` FROM $this->users_table_name WHERE LOWER(`email`) = LOWER(?)", [trim($email)])->fetchAll()[0][0];
+    }
 
     public function getUserRowById($id)
     {
