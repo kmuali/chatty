@@ -20,19 +20,28 @@ if ($_POST["q"] == "getMessages") {
     if (!count($messagesRows)) {
         echo "<div class='text-center mt-5'>No messages,<br>Be the first !</div>";
     } else {
+        echo "<div class='text-center opacity-25'><small>Start of chat</small></div>";
+        $lastUsername = "";
         foreach ($messagesRows as $messageRow) {
             $message = $messageRow["message"];
-            $messageDate = date("F j, Y, g:i a", strtotime($messageRow["date"]));
+            // SQL Date : Y-m-d H:i:s
+            $messageTime = strtotime($messageRow["date"]);
+            if (date("Y-m-d") == date("Y-m-d", $messageTime)) // same day then no need for date, hour and minute only
+                $messageDate = date("g:i a", $messageTime);
+            else
+                $messageDate = date("Y-m-d, g:i A");
             $userRow = $pdo->getUserRowById($messageRow["userId"]);
             $username = $userRow["username"];
             $fullName = $userRow["firstName"] . " " . $userRow["familyName"];
+            $hideUsername = $username == $lastUsername ? "invisible" : "";
+            $lastUsername = $username;
             $color = randomColor($messageRow["userId"]);
-            echo    "<div class='row py-2 ps-1 border-bottom'>
-                        <span class='col-auto font-italic' style='color: $color' title='$fullName'><strong>@$username</strong></span>
+            echo    "<div class='row py-2 ps-1 border-top'>
+                        <span class='col-auto font-italic $hideUsername' style='color: $color' title='$fullName'><strong>@$username</strong></span>
                         <span class='col'>$message</span>
-                        <span class='col-auto opacity-50 mt-1 d-flex align-items-end'>
+                        <small class='col-auto opacity-25 mt-1 d-flex align-items-end'>
                             $messageDate
-                        </span>
+                        </small>
                     </div>";
         }
     }
