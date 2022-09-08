@@ -38,8 +38,10 @@ function sendForm() {
     isOn = true;
     toggleEmojis();
     if (msgInput.value) {
-        scrollChatBody();
         msgInput.value = "";
+        setTimeout(() => {
+            refreshMessages();
+        }, 300);
     }
     return false;
 }
@@ -54,6 +56,7 @@ function refreshMessages() {
         }
     }
     http.send(`q=getMessages`);
+    scrollChatBody();
     return false;
 }
 
