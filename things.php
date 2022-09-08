@@ -19,7 +19,7 @@
     ?>
     <iframe src="assets/things/HTML/home.html" frameborder="0"></iframe>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/all.min.js"></script>
+    
 </body>
 
 </html>
