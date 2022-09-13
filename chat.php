@@ -19,7 +19,11 @@
         <div class="card bg-light">
             <div class="card-header lead text-center">
                 <i class="fa-regular fa-comments"></i>
-                Chatting Room <span class="opacity-50">(Refreshed automatically a minute)</span>
+                Chatting Room <span class="opacity-50 d-none d-lg-inline">(Refreshed automatically every minute)</span>
+                <button class="ms-5 btn btn-outline-dark" onclick="refreshMessages()">
+                    <i class="fa-solid fa-refresh"></i>
+                    Refresh
+                </button>
             </div>
             <div class="chat-body card-body lead overflow-auto" id="cardBodyDiv">
                 <!-- Auto generated from AJAX requests -->
@@ -61,7 +65,7 @@
 
     <?php require_once "assets/php/footer.php" ?>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    
+
     <script src="assets/js/chat.ajax.js"></script>
 
 </body>
